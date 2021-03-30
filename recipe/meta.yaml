@@ -1,9 +1,9 @@
 {% set name = "azcopy" %}
-{% set version = "10.8.0" %}
-{% set release_date = "20201211" %}
-{% set sha256 = "8412586abc002cf17e83830795a9f13e18e26d0b1f809441802ae1245ab66e38" %}  # [osx]
-{% set sha256 = "c4318d38f8194be41367623472e4ef4576f246cc1ea4cac8637eeda27da07d89" %}  # [linux]
-{% set sha256 = "90da52f197e6976e88d7cc1973551600aa918c627b608b156d133b02d11dccda" %}  # [win]
+{% set version = "10.9.0" %}
+{% set release_date = "20210226" %}
+{% set sha256 = "763b8e6f2cbc4fdd2dc324e7e80d7d32e82cd26001e8f727e4e7d36a77be5818" %}  # [osx]
+{% set sha256 = "8c1f76a7edf21a2f1059e65cff73d6e8e2629a677823b93976f1a073341e8670" %}  # [linux]
+{% set sha256 = "562a3bbf731cfead69266b6a779ef0b2b7fa4390b35fbedcbe22c8d67495ec9c" %}  # [win]
 {% set platform = "linux" %}  # [linux]
 {% set platform = "darwin" %}    # [osx]
 {% set platform = "windows" %}    # [win]
