@@ -20,7 +20,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  skip: true  # [linux]
+  skip: true  # [not win]
   number: 0
   script: "mkdir $PREFIX/bin && cp $SRC_DIR/azcopy $PREFIX/bin/azcopy"  # [not win]
   script: "echo F | xcopy %SRC_DIR%\\azcopy.exe %PREFIX%\\bin\\azcopy.exe /F /Y"  # [win]
