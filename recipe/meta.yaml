@@ -1,9 +1,9 @@
 {% set name = "azcopy" %}
-{% set version = "10.9.0" %}
-{% set release_date = "20210226" %}
-{% set sha256 = "763b8e6f2cbc4fdd2dc324e7e80d7d32e82cd26001e8f727e4e7d36a77be5818" %}  # [osx]
-{% set sha256 = "8c1f76a7edf21a2f1059e65cff73d6e8e2629a677823b93976f1a073341e8670" %}  # [linux]
-{% set sha256 = "562a3bbf731cfead69266b6a779ef0b2b7fa4390b35fbedcbe22c8d67495ec9c" %}  # [win]
+{% set version = "10.11.0" %}
+{% set release_date = "20210616" %}
+{% set sha256 = "afa1f25f805ae1caff56bf9cac2f171406a4294625ed9f9e30dca22002214f83" %}  # [osx]
+{% set sha256 = "97477b5ffd8dd223fcfa7e177844dea5b5bcead5223ef65ac96b22337b83a37e" %}  # [linux]
+{% set sha256 = "8ce7f6d30f4ec6d249d9977ba579fa1812dc3120827858426510045658a6dcb1" %}  # [win]
 {% set platform = "linux" %}  # [linux]
 {% set platform = "darwin" %}    # [osx]
 {% set platform = "windows" %}    # [win]
@@ -20,7 +20,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  skip: true  # [linux]
+  skip: true  # [not win]
   number: 0
   script: "mkdir $PREFIX/bin && cp $SRC_DIR/azcopy $PREFIX/bin/azcopy"  # [not win]
   script: "echo F | xcopy %SRC_DIR%\\azcopy.exe %PREFIX%\\bin\\azcopy.exe /F /Y"  # [win]
