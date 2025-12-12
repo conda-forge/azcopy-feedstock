@@ -1,9 +1,8 @@
 {% set name = "azcopy" %}
-{% set version = "10.11.0" %}
-{% set release_date = "20210616" %}
-{% set sha256 = "afa1f25f805ae1caff56bf9cac2f171406a4294625ed9f9e30dca22002214f83" %}  # [osx]
-{% set sha256 = "97477b5ffd8dd223fcfa7e177844dea5b5bcead5223ef65ac96b22337b83a37e" %}  # [linux]
-{% set sha256 = "8ce7f6d30f4ec6d249d9977ba579fa1812dc3120827858426510045658a6dcb1" %}  # [win]
+{% set version = "10.31.0" %}
+{% set sha256 = "abddfeecbddf24682fe2720802002ae5195afc2bd226dcda8e006fbd09f62e4b" %}  # [osx]
+{% set sha256 = "1864e3876370186bf81f425b0cc4b67e60341b12035192a37d8b633e19c41fa3" %}  # [linux]
+{% set sha256 = "12b93fa3e75ed40fd9fa8417e93ff1358ffa74a272a63fc28c468523bc32ef48" %}  # [win]
 {% set platform = "linux" %}  # [linux]
 {% set platform = "darwin" %}    # [osx]
 {% set platform = "windows" %}    # [win]
@@ -16,7 +15,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://azcopyvnext.azureedge.net/release{{ release_date }}/azcopy_{{ platform }}_amd64_{{ version }}.{{ ext }}
+  url: https://github.com/Azure/azure-storage-azcopy/releases/download/v{{ version }}/azcopy_{{ platform }}_amd64_{{ version }}.{{ ext }}
   sha256: {{ sha256 }}
 
 build:
